@@ -45,15 +45,6 @@
         background: #3c31dd;
       }
 
-      .red {
-        background: #dd3f31;
-      }
-
-      .pink {
-        background: #f45b9b;
-        overflow: hidden;
-      }
-
       .top {
         height: 7rem;
         background-image: url("./flipped.svg");
@@ -125,8 +116,35 @@
         background-size: cover;
       }
 
+      .wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      .wave svg {
+        position: relative;
+        display: block;
+        width: calc(118% + 1.3px);
+        height: 89px;
+      }
+
+      .wave .shape-fill {
+        fill: #000000;
+      }
+
       .layer {
-        background-image: url("./layer.svg");
+        background-image: url("./wave.svg");
+      }
+
+      .projectsTitle {
+        font-size: 3rem;
+        font-weight: bold;
+        width: 80%;
       }
     </style>
   </head>
@@ -155,7 +173,10 @@
         <div class="pfp"></div>
         <div>
           <h1>Hi 👋<br />I am Kush</h1>
-          <p>I like to <span id="typist"></span> stuff</p>
+          <p>
+            I am a high school student from <b>India</b>, and I like to <br />
+            <span id="typist"></span> stuff
+          </p>
           <script>
             const text = document.getElementById("typist");
             const typewriter = new Typewriter(text, {
@@ -177,7 +198,22 @@
         </div>
       </div>
     </section>
-    <section id="projects"></section>
+    <section id="projects" class="blue">
+      <h1 class="projectsTitle">Things I've Made. ✌</h1>
+      <div class="wave">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
     <div class="spacer layer"></div>
   </body>
 </html>
