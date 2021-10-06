@@ -1,0 +1,183 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kush</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <style>
+      @media screen and (max-width: 640px) {
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        background: #000000;
+        overflow-x: hidden;
+      }
+
+      section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+        padding-top: 100px;
+      }
+
+      .blue {
+        background: #3c31dd;
+      }
+
+      .red {
+        background: #dd3f31;
+      }
+
+      .pink {
+        background: #f45b9b;
+        overflow: hidden;
+      }
+
+      .top {
+        height: 7rem;
+        background-image: url("./flipped.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .navbar {
+        display: grid;
+        grid-template-columns: 6rem 6rem 6rem;
+        justify-content: right;
+        align-items: center;
+        height: 2rem;
+        background-color: #ffffff7a;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 99;
+      }
+
+      .navbtn {
+        color: #000000;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+        width: 6rem;
+        height: 2rem;
+        background-color: #ffffff00;
+        border: none;
+        transition-property: background-color, border-color, color, fill, stroke,
+          opacity, box-shadow, transform, filter, backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+      }
+
+      .navbtn:hover {
+        color: #ffffff;
+        background-color: #150241;
+      }
+
+      .title {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        width: 50%;
+      }
+
+      .pfp {
+        aspect-ratio: 1/1;
+        width: 15rem;
+        background-image: url("https://avatars.githubusercontent.com/u/68998452?s=400&u=f4b3382ccae34d96106fd3016b99b62377c859c7&v=4");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 100%;
+        @media screen and (max-width: 640px) {
+          width: 10rem;
+        }
+      }
+
+      .spacer {
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .layer {
+        background-image: url("./layer.svg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <nav class="navbar">
+        <button
+          class="navbtn"
+          onclick="window.location = `https://github.com/git-kush`"
+        >
+          GitHub
+        </button>
+        <button
+          class="navbtn"
+          onclick="window.location = `https://blog.kush.in`"
+        >
+          Blog
+        </button>
+        <button class="navbtn" onclick="window.location = `#projects`">
+          Projects
+        </button>
+      </nav>
+    </div>
+    <section>
+      <div class="title">
+        <div class="pfp"></div>
+        <div>
+          <h1>Hi 👋<br />I am Kush</h1>
+          <p>I like to <span id="typist"></span> stuff</p>
+          <script>
+            const text = document.getElementById("typist");
+            const typewriter = new Typewriter(text, {
+              loop: true,
+              delay: "natural",
+            });
+            typewriter
+              .typeString("<strong>learn</strong>")
+              .pauseFor(30)
+              .deleteAll("natural")
+              .typeString("<strong>explore</strong>")
+              .pauseFor(30)
+              .deleteAll("natural")
+              .typeString("<strong>create</strong>")
+              .pauseFor(30)
+              .deleteAll("natural")
+              .start();
+          </script>
+        </div>
+      </div>
+    </section>
+    <section id="projects"></section>
+    <div class="spacer layer"></div>
+  </body>
+</html>
