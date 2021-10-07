@@ -42,7 +42,7 @@
       }
 
       .blue {
-        background: #3c31dd;
+        background: #594ee8;
       }
 
       .top {
@@ -141,10 +141,85 @@
         background-image: url("./wave.svg");
       }
 
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        grid-auto-flow: column;
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
+      }
+
       .projectsTitle {
         font-size: 3rem;
         font-weight: bold;
         width: 80%;
+      }
+
+      .projectCard {
+        display: grid;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        background-color: #fff;
+        color: #000;
+        width: 22rem;
+        height: 9rem;
+        align-items: center;
+        grid-template-columns: 9rem 11rem 2rem;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      }
+
+      .projectAvatar {
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .projectAvatar img {
+        width: 9rem;
+      }
+
+      .projectDetails {
+        width: 11rem;
+        height: 9rem;
+        padding-left: 0.5rem;
+      }
+
+      .projectDetails h1 {
+        font-size: 1.5rem;
+      }
+
+      .projectDetails p {
+        font-size: medium;
+      }
+
+      .projectNav {
+        display: grid;
+        overflow: hidden;
+        width: 2rem;
+      }
+
+      .projectNav div {
+        display: flex;
+        height: 5rem;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        background-color: #ff4800;
+        border-style: solid;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-width: 0.1rem;
+        border-color: #000;
+        transition-property: background-color, border-color, color, fill, stroke,
+          opacity, box-shadow, transform, filter, backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+      }
+
+      .projectNav div:hover {
+        background-color: #c70000;
       }
     </style>
   </head>
@@ -199,7 +274,90 @@
       </div>
     </section>
     <section id="projects" class="blue">
-      <h1 class="projectsTitle">Things I've Made. ✌</h1>
+      <h1 class="projectsTitle">Things I've Made.</h1>
+      <div class="projects">
+        <div class="projectCard">
+          <div class="projectAvatar">
+            <img
+              src="https://avatars.githubusercontent.com/u/79217108?s=400&u=8e026c3b1f55fa7c6a9420bbfcbe970bd33a18cb&v=4"
+            />
+          </div>
+          <div class="projectDetails">
+            <h1>Melody</h1>
+            <p>A feature-rich free and open source Discord music bot.</p>
+          </div>
+          <nav class="projectNav">
+            <div
+              onclick="window.location='https://github.com/melody-bot/Melody'"
+            >
+              <img
+                width="25"
+                height="25"
+                alt="github logo"
+                src="https://unpkg.com/simple-icons@v5/icons/github.svg"
+              />
+            </div>
+            <div onclick="window.location='https://melody-bot.tech/'">
+              <img width="25" height="25" alt="url icon" src="./link.png" />
+            </div>
+          </nav>
+        </div>
+        <div class="projectCard">
+          <div class="projectAvatar" style="background-color: rgb(51, 51, 51)">
+            <img
+              src="https://avatars.githubusercontent.com/u/91670488?s=400&u=2274fd0b2751d0520ce2e9e27ff2b082791cdb7b&v=4"
+            />
+          </div>
+          <div class="projectDetails">
+            <h1>BytePost</h1>
+            <p>A blog about coding ventures and computer science tips.</p>
+          </div>
+          <nav class="projectNav">
+            <div
+              onclick="window.location='https://github.com/BytePost/bytepost.github.io/'"
+            >
+              <img
+                width="25"
+                height="25"
+                alt="github logo"
+                src="https://unpkg.com/simple-icons@v5/icons/github.svg"
+              />
+            </div>
+            <div onclick="window.location='https://blog.kush.in'">
+              <img width="25" height="25" alt="url icon" src="./link.png" />
+            </div>
+          </nav>
+        </div>
+        <div class="projectCard">
+          <div class="projectAvatar">
+            <img src="./crypt-buddy.png" />
+          </div>
+          <div class="projectDetails">
+            <h1>Crypt Buddy</h1>
+            <p>
+              A desktop app for PGP based encryption and signature of plaintext
+              messages.
+            </p>
+          </div>
+          <nav class="projectNav">
+            <div
+              onclick="window.location='https://github.com/Cylicon/crypt-buddy/'"
+            >
+              <img
+                width="25"
+                height="25"
+                alt="github logo"
+                src="https://unpkg.com/simple-icons@v5/icons/github.svg"
+              />
+            </div>
+            <div
+              onclick="alert(`I don't have a webpage for this one yet ¯\\_(ツ)_/¯`)"
+            >
+              <img width="25" height="25" alt="url icon" src="./link.png" />
+            </div>
+          </nav>
+        </div>
+      </div>
       <div class="wave">
         <svg
           data-name="Layer 1"
