@@ -45,6 +45,10 @@
         background: #594ee8;
       }
 
+      .orange {
+        background: rgb(221, 69, 9);
+      }
+
       .top {
         height: 7rem;
         background-image: url("./assets/flipped-waves.svg");
@@ -118,7 +122,7 @@
         background-size: cover;
       }
 
-      .wave {
+      .custom-shape-divider-top-1633970831 {
         position: absolute;
         top: 0;
         left: 0;
@@ -128,14 +132,35 @@
         transform: rotate(180deg);
       }
 
-      .wave svg {
+      .custom-shape-divider-top-1633970831 svg {
         position: relative;
         display: block;
-        width: calc(118% + 1.3px);
-        height: 89px;
+        width: calc(100% + 1.3px);
+        height: 65px;
+        transform: rotateY(180deg);
       }
 
-      .wave .shape-fill {
+      .custom-shape-divider-top-1633970831 .shape-fill {
+        fill: #dd4509;
+      }
+
+      .wave1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .wave1 svg {
+        position: relative;
+        display: block;
+        width: calc(116% + 1.3px);
+        height: 79px;
+      }
+
+      .wave1 .shape-fill {
         fill: #000000;
       }
 
@@ -282,6 +307,34 @@
         </div>
       </div>
     </section>
+    <section class="orange">
+      <h1 class="projectsTitle">Things I Know.</h1>
+      <ul style="font-size: x-large; line-height: 3rem; width: 80%">
+        <li>Considerable JavaScript and Python</li>
+        <li>Bit of C# and C++</li>
+        <li>Linux Server Administration</li>
+        <li>Basic Hacking & Cybersecurity</li>
+        <li>Simple CI/CD & DevOps</li>
+        <li>Docker and Microservices</li>
+        <li>Blogging</li>
+        <li>Exceptional Googling</li>
+        <li>Other stuff outside of CS or IT</li>
+        <li>Exploring & Learning 😎</li>
+      </ul>
+      <div class="wave1">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
     <section id="projects" class="blue">
       <h1 class="projectsTitle">Things I've Made.</h1>
       <div class="projects">
@@ -368,7 +421,7 @@
             </div>
             <nav class="projectNav">
               <div
-                onclick="window.location='https://github.com/git-kush/studious-guide-web/'"
+                onclick="window.location='https://github.com/Cylicon/crypt-buddy/'"
               >
                 <img
                   width="25"
@@ -401,7 +454,7 @@
             </div>
             <nav class="projectNav">
               <div
-                onclick="window.location='https://github.com/Cylicon/crypt-buddy/'"
+                onclick="window.location='https://github.com/git-kush/studious-guide-web/'"
               >
                 <img
                   width="25"
@@ -422,7 +475,7 @@
           </div>
         </div>
       </div>
-      <div class="wave">
+      <div class="custom-shape-divider-top-1633970831">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
