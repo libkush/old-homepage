@@ -76,10 +76,12 @@
       }
 
       .navbtn {
+        text-decoration: none;
         color: #000000;
         font-weight: bold;
         font-size: 1rem;
         text-align: center;
+        line-height: 2rem;
         width: 6rem;
         height: 2rem;
         background-color: #ffffff00;
@@ -266,21 +268,9 @@
   <body>
     <div class="top">
       <nav class="navbar">
-        <button
-          class="navbtn"
-          onclick="window.location = `https://github.com/git-kush`"
-        >
-          GitHub
-        </button>
-        <button
-          class="navbtn"
-          onclick="window.location = `https://blog.kush.in`"
-        >
-          Blog
-        </button>
-        <button class="navbtn" onclick="window.location = `#projects`">
-          Projects
-        </button>
+        <a class="navbtn" href="./github.html">GitHub</a>
+        <a class="navbtn" href="./blog.html">Blog</a>
+        <a class="navbtn" href="#projects">Projects</a>
       </nav>
     </div>
     <section>
